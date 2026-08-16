@@ -218,15 +218,15 @@ const answers = [
     "ฟังก์ชันเพิ่ม",
     "0"
 ];
+        let currentQuestionIndex = 0;
 
         function generateQuestion() {
-            const randomIndex = Math.floor(Math.random() * questions.length);
-            document.getElementById('question').innerText = questions[randomIndex];
+            currentQuestionIndex = Math.floor(Math.random() * questions.length);
+            document.getElementById('question').innerText = questions[currentQuestionIndex];
         }
 
         function showAnswer() {
-            const randomIndex = Math.floor(Math.random() * answers.length);
-            alert(answers[randomIndex]);
+            alert(answers[currentQuestionIndex]);
         }
     </script>
 </body>
